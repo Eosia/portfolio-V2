@@ -1,0 +1,570 @@
+@charset "UTF-8";
+/* root.scss */
+/* imports des modules scss -imports des css de toutes les pages du site- */
+/*app.scss*/
+/* breakpoints bootstrap -taille d'écran- */
+/*
+// Extra large devices (large desktops, 1200px and up)
+@media screen and  (min-width: 1200px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 992px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 576px) {
+
+}
+
+// Small devices (portrait phones, 300px and up)
+@media screen and (max-width: 575.98px) {
+
+}
+*/
+/* app.scss fichier de surcharge */
+html, body {
+  padding: 0 !important;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+  max-width: 100% !important;
+  height: 100% !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  min-height: 80vh !important;
+}
+
+/*cache des elements*/
+.hidden {
+  display: none;
+}
+
+/*edge font*/
+@font-face {
+  font-family: "tourner";
+  src: url("../../fonts/tourner.ttf");
+  font-display: auto;
+}
+/*varino font*/
+@font-face {
+  font-family: "varino";
+  src: url("../../fonts/varino.ttf");
+  font-display: auto;
+}
+/*variables des polices*/
+/*edge*/
+/*varino*/
+.font1 {
+  font-family: "varino";
+}
+
+.font2 {
+  font-family: "tourner";
+}
+
+.font3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.color1 {
+  color: #c4b280;
+}
+
+.text-xl {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+@media (min-width: 1200px) {
+  .text-xl {
+    font-size: 3.2rem !important;
+    letter-spacing: 0.4rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .text-xl {
+    font-size: 2.6rem !important;
+    letter-spacing: 0.3rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .text-xl {
+    font-size: 2.2rem !important;
+    letter-spacing: 0.4rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .text-xl {
+    font-size: 2.4rem !important;
+    letter-spacing: 0.4rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .text-xl {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+
+.text-l {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+@media (min-width: 1200px) {
+  .text-l {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .text-l {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .text-l {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .text-l {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .text-l {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+
+/*accueil.scss*/
+.section-accueil .img-avatar {
+  border: 1px ridge #c4b280;
+}
+@media (max-width: 767px) {
+  .section-accueil .accueil-child-1-item-right {
+    margin-top: 7vh;
+  }
+}
+.section-accueil .container-btn {
+  margin-bottom: 10vh !important;
+}
+.section-accueil .container-btn .btn-home {
+  border: 5px solid #c4b280;
+  color: #c4b280;
+  background-color: #000;
+  padding: 10px 5px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: "varino";
+  letter-spacing: 0.2rem;
+}
+.section-accueil .container-btn .btn-home:hover {
+  border: 5px outset #000;
+  color: #000;
+  background-color: #c4b280;
+}
+.section-accueil .container-btn .btn-home:after {
+  border: 5px solid #c4b280;
+  color: #c4b280;
+  background-color: #000;
+}
+@media (min-width: 1200px) {
+  .section-accueil .container-btn .btn-home {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .section-accueil .container-btn .btn-home {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .section-accueil .container-btn .btn-home {
+    font-size: 1rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .section-accueil .container-btn .btn-home {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-accueil .container-btn .btn-home {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .section-accueil .container-btn {
+    margin-top: 7vh;
+  }
+}
+@media (max-width: 992px) {
+  .section-accueil .container-btn .btn-portfolio {
+    margin-top: 3vh !important;
+  }
+}
+
+/*scss contact*/
+.btn-contact {
+  border: 5px solid #c4b280 !important;
+  color: #c4b280 !important;
+  background-color: #000 !important;
+  padding: 10px 30px !important;
+  border-radius: 10px !important;
+  font-weight: 700;
+  font-family: "varino";
+  letter-spacing: 0.4rem !important;
+}
+.btn-contact:hover {
+  border: 5px outset #000 !important;
+  color: #000 !important;
+  background-color: #c4b280 !important;
+}
+.btn-contact:after {
+  border: 5px solid #c4b280 !important;
+  color: #c4b280 !important;
+  background-color: #000 !important;
+}
+
+.form-control {
+  border: 1px solid #c4b280 !important;
+  box-shadow: 2px 2px 2px 2px #000 !important;
+}
+
+.container-btn {
+  margin-bottom: 10vh !important;
+}
+.container-btn .btn-home {
+  border: 5px solid #c4b280;
+  color: #c4b280;
+  background-color: #000;
+  padding: 10px 5px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: "varino";
+  letter-spacing: 0.2rem;
+  margin: 7vh auto !important;
+}
+.container-btn .btn-home:hover {
+  border: 5px outset #000;
+  color: #000;
+  background-color: #c4b280;
+}
+.container-btn .btn-home:after {
+  border: 5px solid #c4b280;
+  color: #c4b280;
+  background-color: #000;
+}
+@media (min-width: 1200px) {
+  .container-btn .btn-home {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .container-btn .btn-home {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .container-btn .btn-home {
+    font-size: 1rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .container-btn .btn-home {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .container-btn .btn-home {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .container-btn {
+    margin-top: 7vh;
+  }
+}
+@media (max-width: 992px) {
+  .container-btn .btn-tel {
+    margin-top: 3vh !important;
+  }
+}
+
+/*footer.scss*/
+footer {
+  background-color: #000;
+}
+footer .text-footer {
+  color: #c4b280;
+}
+@media (min-width: 1200px) {
+  footer .text-footer {
+    font-size: 2rem !important;
+    letter-spacing: 0.3rem !important;
+  }
+}
+@media (min-width: 992px) {
+  footer .text-footer {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 768px) {
+  footer .text-footer {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 576px) {
+  footer .text-footer {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.3rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  footer .text-footer {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+
+/*header.scss*/
+header {
+  background-color: #000;
+  border-bottom: 5px solid #c4b280;
+}
+header h1, header h2 {
+  color: #c4b280;
+}
+header h1 {
+  font-family: "tourner" !important;
+}
+@media (min-width: 1200px) {
+  header h1 {
+    font-size: 8.6rem !important;
+    letter-spacing: 2rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  header h1 {
+    font-size: 7.6rem !important;
+    letter-spacing: 1.5rem !important;
+  }
+}
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 6.6rem !important;
+    letter-spacing: 1.5rem !important;
+  }
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 5.6rem !important;
+    letter-spacing: 1.4rem !important;
+  }
+}
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 2.6rem !important;
+    letter-spacing: 0.6rem !important;
+  }
+}
+header h2 {
+  font-family: "varino" !important;
+}
+@media (min-width: 1200px) {
+  header h2 {
+    font-size: 2.1rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  header h2 {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 992px) {
+  header h2 {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (max-width: 768px) {
+  header h2 {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 576px) {
+  header h2 {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+
+/*nav.scss*/
+nav {
+  background-color: #000;
+  border-bottom: 3px solid #c4b280;
+  /*navbar-nav*/
+}
+nav .navbar-nav {
+  /*link admin en rouge*/
+  /*link admin disable en blanc*/
+}
+nav .navbar-nav li {
+  font-family: "Lucida Console", "Courier New", monospace;
+  letter-spacing: 0.2rem;
+}
+nav .navbar-nav li a {
+  color: #c4b280 !important;
+}
+nav .navbar-nav .link-admin {
+  color: red !important;
+}
+nav .navbar-nav .link-disable {
+  color: #fff !important;
+}
+
+/*social.scss*/
+.section-social {
+  background-color: #000;
+}
+
+/*scss skills*/
+.card-skill {
+  background-color: #000 !important;
+  padding: 15px 5px;
+  border: 3px outset #c4b280 !important;
+  margin-bottom: 5vh;
+}
+.card-skill .progress-bar {
+  background-color: #c4b280;
+}
+
+@media (min-width: 1200px) {
+  .font-skills {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .font-skills {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .font-skills {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .font-skills {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .font-skills {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+
+/*scss portfolio*/
+.btn-site {
+  border: 3px solid #c4b280 !important;
+  color: #c4b280 !important;
+  background-color: #000 !important;
+  padding: 10px 5px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: "varino";
+  letter-spacing: 0.2rem;
+}
+.btn-site:hover {
+  border: 3px outset silver !important;
+  color: #000 !important;
+  background-color: #c4b280 !important;
+}
+.btn-site:after {
+  border: 5px solid #c4b280;
+  color: #c4b280 !important;
+  background-color: #000 !important;
+}
+
+@media (max-width: 992px) {
+  .btn-code {
+    margin-top: 3vh;
+  }
+}
+
+.card-portfolio {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+@media (min-width: 1600px) {
+  .card-portfolio {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  .card-portfolio {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .card-portfolio {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .card-portfolio {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .card-portfolio {
+    font-size: 1.3rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .card-portfolio {
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+
+/*# sourceMappingURL=root.css.map */

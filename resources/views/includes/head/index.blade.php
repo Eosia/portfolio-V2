@@ -1,0 +1,6 @@
+@include('includes.head.analytics')
+@include('includes.head.cookies')
+@include('includes.head.meta')
+@include('includes.head.script')
+@include('includes.head.style')
+@include('includes.head.favicon')
