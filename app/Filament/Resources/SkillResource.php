@@ -10,6 +10,10 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Forms\Components\Select;
+use App\Models\{
+    Category
+};
 
 class SkillResource extends Resource
 {
@@ -28,9 +32,10 @@ class SkillResource extends Resource
                     ->required()
                     ->maxLength(191),
                 Forms\Components\TextInput::make('level')
+                    ->numeric()
                     ->required(),
-                Forms\Components\TextInput::make('category_id')
-                    ->required(),
+                Forms\Components\Select::make('category_id')
+                    ->options(Category::orderBy('name', 'ASC')->pluck('name', 'id')),
             ]);
     }
 
@@ -51,14 +56,14 @@ class SkillResource extends Resource
                 //
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [

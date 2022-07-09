@@ -79,7 +79,7 @@ main {
 }
 
 .color1 {
-  color: #c4b280;
+  color: #c4b280 !important;
 }
 
 .text-xl {
@@ -430,31 +430,42 @@ header h2 {
 
 /*nav.scss*/
 nav {
-  background-color: #000;
-  border-bottom: 3px solid #c4b280;
-  /*navbar-nav*/
-}
-nav .navbar-nav {
+  background-color: #000 !important;
+  border-bottom: 3px solid #c4b280 !important;
   /*link admin en rouge*/
   /*link admin disable en blanc*/
 }
-nav .navbar-nav li {
-  font-family: "Lucida Console", "Courier New", monospace;
-  letter-spacing: 0.2rem;
-}
-nav .navbar-nav li a {
-  color: #c4b280 !important;
-}
-nav .navbar-nav .link-admin {
+nav a::active {
   color: red !important;
 }
-nav .navbar-nav .link-disable {
+nav .link-admin {
+  color: red !important;
+}
+nav .link-disable {
   color: #fff !important;
+}
+nav .x-jet-nav-link {
+  color: #c4b280 !important;
+  font-family: "Lucida Console", "Courier New", monospace !important;
+  letter-spacing: 0.2rem !important;
+  text-transform: uppercase !important;
+}
+nav .x-jet-nav-link:hover {
+  color: whitesmoke !important;
+}
+nav .x-jet-nav-link-mobile {
+  color: #c4b280 !important;
+  font-family: "Lucida Console", "Courier New", monospace !important;
+  letter-spacing: 0.2rem !important;
+  text-transform: uppercase !important;
 }
 
 /*social.scss*/
 .section-social {
   background-color: #000;
+}
+.section-social .social-link:hover {
+  color: #818CF8 !important;
 }
 
 /*scss skills*/

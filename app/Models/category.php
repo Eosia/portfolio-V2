@@ -13,7 +13,7 @@ class category extends Model
 
     public function skills()
     {
-        return $this->hasMany(skill::class);
+        return $this->hasMany(Skill::class);
     }
 
 }

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\skill;
+use App\Models\{
+    skill,
+    category
+};
 use Illuminate\Http\Request;
 
 class SkillController extends Controller
@@ -15,14 +18,18 @@ class SkillController extends Controller
     public function index()
     {
         //
+        $categories = Category::orderBy('id')->get();
+        $skills = Skill::all();
         $title = "Skills";
         $description = "Mes compétences en développement";
         $canonical = "https://www.eosia.dev/skills";
 
         $data = [
-            'title'=>$title,
+            'title'=> $title,
             'description' => $description,
             'canonical' => $canonical,
+            'categories' => $categories,
+            'skills' => $skills
         ];
         return view('skill.index', $data);
 

@@ -1,20 +1,12 @@
 /*nav.scss*/
 
 nav {
-  background-color: #000;
-  border-bottom: 3px solid #c4b280;
+  background-color: #000 !important;
+  border-bottom: 3px solid #c4b280 !important;
 
-  /*navbar-nav*/
-  .navbar-nav {
-    li {
-      font-family: $font3;
-      letter-spacing: 0.2rem;
-
-      a {
-        color: #c4b280 !important;
-      }
+    a::active {
+        color:red !important;
     }
-
     /*link admin en rouge*/
     .link-admin {
       color: red !important;
@@ -25,7 +17,26 @@ nav {
       color: #fff !important;
     }
 
-  }
+    .x-jet-nav-link {
+        color: #c4b280 !important;
+        font-family: $font3 !important;
+        letter-spacing: 0.2rem !important;
+        text-transform: uppercase !important;
 
-}
+        &:hover {
+            color: whitesmoke !important;
+        }
+
+
+    }
+
+    .x-jet-nav-link-mobile {
+        color: #c4b280 !important;
+        font-family: $font3 !important;
+        letter-spacing: 0.2rem !important;
+        text-transform: uppercase !important;
+
+    }
+
+  }
 

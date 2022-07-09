@@ -2,5 +2,8 @@
 .section-social {
   background-color: #000;
 }
+.section-social .social-link:hover {
+  color: #818CF8 !important;
+}
 
 /*# sourceMappingURL=social.css.map */

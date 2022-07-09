@@ -2,6 +2,9 @@
 
 .section-social {
   background-color: #000;
-
-
+    .social-link {
+        &:hover {
+            color: #818CF8 !important;
+        }
+    }
 }
