@@ -8,12 +8,15 @@
         "php": "^8.0.2",
         "doctrine/dbal": "^3.3",
         "filament/filament": "^2.12",
+        "graham-campbell/security": "10.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
         "laravel/jetstream": "^2.8",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "livewire/livewire": "^2.5"
+        "livewire/livewire": "^2.5",
+        "mews/captcha": "^3.2",
+        "spatie/laravel-honeypot": "^4.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

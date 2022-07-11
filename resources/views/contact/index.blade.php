@@ -19,12 +19,11 @@
 
     <!-- formulaire de contact -->
     <div class="w-full">
-        <div class="bg-gradient-to-b from-green-800 to-green-600 h-96"></div>
+        <div class="bg-gradient-to-b from-indigo-200 to-indogo-600 h-96"></div>
         <div class="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
             <div class="bg-white w-full shadow rounded p-8 sm:p-12 -mt-72">
                 <p class="text-3xl font-bold leading-7 text-center">NOUS CONTACTER</p>
                 <form  method="post"  action="{{ route('contact.send') }}" enctype="multipart/form-data" >
-
                     @csrf
                     <x-honeypot />
 
@@ -74,7 +73,7 @@
                     <div class="error text-danger mt-2">{{ $error='Vous devez entrer un message' }}</div>
                     @enderror
 
-                    
+
                     <div>
                         <div class="w-full flex flex-col mt-8">
                             <div class="form-group{{ $errors->has('captcha') ? ' has-error' : '' }}">
@@ -82,7 +81,7 @@
                                 <div class="col-md-12">
                                     <div class="captcha my-3">
                                         <span>{!! captcha_img() !!}</span>
-                                        <button type="button"class="btn hover:bg-green-400 btn-lg text-white bg-green-600 btn-refresh mt-3">
+                                        <button type="button"class="btn hover:bg-indigo-400 btn-lg text-white bg-indigo-600 btn-refresh mt-3">
                                             <i class="fa fa-refresh"></i>
                                         </button>
                                     </div>
@@ -98,12 +97,13 @@
                             </div>
                         </div>
                     </div>
-                    
+
 
                     <div class="flex items-center justify-center w-full">
                         <button type="submit" name="send"
-                            class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-green-700 rounded hover:bg-green-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none">
-                            ENVOYER
+                            class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-indigo-600 rounded hover:bg-indigo-400
+                                focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none">
+                            ENVOYER <i class="pl-2 fa-solid fa-paper-plane"></i>
                         </button>
                     </div>
                 </form>
