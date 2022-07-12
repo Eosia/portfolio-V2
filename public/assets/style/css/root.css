@@ -435,9 +435,6 @@ nav {
   /*link admin en rouge*/
   /*link admin disable en blanc*/
 }
-nav a::active {
-  color: red !important;
-}
 nav .link-admin {
   color: red !important;
 }

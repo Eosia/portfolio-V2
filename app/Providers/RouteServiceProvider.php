@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME = '/console';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
@@ -48,5 +48,70 @@ class RouteServiceProvider extends ServiceProvider
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
+
+        RateLimiter::for('home', function (Request $request) {
+            return $request->user()
+                ? Limit::perMinute(100)->by($request->user()->id)
+                : Limit::perMinute(3)->response(function () {
+                    return redirect()->to('https://www.netshield.pw/');
+                })->by($request->ip());
+        });
+
+        // rate limiter for home route
+        RateLimiter::for('home', function (Request $request) {
+            return $request->user()
+                ? Limit::perMinute(100)->by($request->user()->id)
+                : Limit::perMinute(3)->response(function () {
+                    return redirect()->to('https://www.netshield.pw/');
+                })->by($request->ip());
+        });
+
+        // rate limiter for skills route
+        RateLimiter::for('skills', function (Request $request) {
+            return $request->user()
+                ? Limit::perMinute(100)->by($request->user()->id)
+                : Limit::perMinute(3)->response(function () {
+                    return redirect()->to('https://www.netshield.pw/');
+                })->by($request->ip());
+        });
+
+        // rate limiter for portfolio route
+        RateLimiter::for('portfolio', function (Request $request) {
+            return $request->user()
+                ? Limit::perMinute(100)->by($request->user()->id)
+                : Limit::perMinute(3)->response(function () {
+                    return redirect()->to('https://www.netshield.pw/');
+                })->by($request->ip());
+        });
+
+        // rate limiter for contact route
+        RateLimiter::for('contact', function (Request $request) {
+            return $request->user()
+                ? Limit::perMinute(100)->by($request->user()->id)
+                : Limit::perMinute(3)->response(function () {
+                    return redirect()->to('https://www.netshield.pw/');
+                })->by($request->ip());
+        });
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

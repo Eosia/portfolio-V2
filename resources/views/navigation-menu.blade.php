@@ -1,11 +1,11 @@
-<nav x-data="{ open: false }" class="bg-black border-b border-gray-100 py-4
+<nav x-data="{ open: false }" class="bg-black border-b border-gray-100 py-10
 " id="top">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex justify-content-evenly align-items-center">
+    <div class="w-full  mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-evenly h-16">
+            <div class="flex justify-content-between align-items-center">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="shrink-0 ml-0 flex items-center">
                     <a href="{{ route('home') }}">
                         <img src="{{ asset('assets/img/favicon/logo.png') }}" alt="logo d'Eosia développeur" class="rounded" width="92" height="92">
                     </a>
@@ -40,7 +40,7 @@
 
                 @auth()
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-jet-nav-link href="{{ route('filament.pages.dashboard') }}" :active="request()->routeIs('filament.pages.dashboard')" class="nav-jetlink">
+                        <x-jet-nav-link href="{{ route('filament.pages.dashboard') }}" :active="request()->routeIs('filament.pages.dashboard')" class="x-jet-nav-link">
                             {{ __('Admin') }}
                         </x-jet-nav-link>
                     </div>
@@ -205,25 +205,28 @@
                     </div>
                 @endif
 
-                <div>
-                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                <div class="mx-auto text-center">
+                    <div class="font-medium text-base text-gray-800 x-jet-nav-link-mobile text-center">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-sm text-gray-500 x-jet-nav-link-mobile text-center">{{ Auth::user()->email }}</div>
                 </div>
             </div>
 
             <div class="mt-3 space-y-1">
 
-                <x-jet-responsive-nav-link href="{{ route('filament.pages.dashboard') }}" :active="request()->routeIs('filament.pages.dashboard')">
+                <x-jet-responsive-nav-link href="{{ route('filament.pages.dashboard') }}" :active="request()->routeIs('filament.pages.dashboard')"
+                                           class=" x-jet-nav-link-mobile text-center">
                     {{ __('Admin') }}
                 </x-jet-responsive-nav-link>
 
                 <!-- Account Management -->
-                <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')"
+                                           class="x-jet-nav-link-mobile text-center">
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                    <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
+                    <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')"
+                                               class="x-jet-nav-link-mobile text-center">
                         {{ __('API Tokens') }}
                     </x-jet-responsive-nav-link>
                 @endif
@@ -232,7 +235,7 @@
                 <form method="POST" action="{{ route('logout') }}" x-data>
                     @csrf
 
-                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                    <x-jet-responsive-nav-link class="x-jet-nav-link text-center" href="{{ route('logout') }}"
                                    @click.prevent="$root.submit();">
                         {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>

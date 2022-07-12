@@ -32,7 +32,7 @@
                         <div class="w-full flex flex-col">
                             <label class="font-semibold leading-none">Votre nom</label>
                             <input type="text" name="name" id="name" placeholder="John Doe"
-                                   value="{{ old('name' ?? '') }}" min="2" required
+                                   value="{!! old('name' ?? '') !!}" min="2" required
                                    class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                     <div class="md:flex items-center mt-8">
                         <div class="w-full flex flex-col">
                             <label class="font-semibold leading-none">Email</label>
-                            <input type="email" name="email" id="email" placeholder="supermail@localhost.com" value="{{ old('email' ?? '') }}" min="2" required
+                            <input type="email" name="email" id="email" placeholder="supermail@localhost.com" value="{!! old('email' ?? '') !!}" min="2" required
                                    class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
                         </div>
                         <br>
@@ -55,7 +55,7 @@
                     <div class="md:flex items-center mt-8">
                         <div class="w-full flex flex-col">
                             <label class="font-semibold leading-none">Sujet du message</label>
-                            <input type="text"  name="subject"  placeholder="Sujet de votre message ?" value="{{ old('subject' ?? '') }}" id="subject" min="4" required
+                            <input type="text"  name="subject"  placeholder="Sujet de votre message ?" value="{!! old('subject' ?? '') !!}" id="subject" min="4" required
                                    class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
                         </div>
                     </div>
@@ -66,7 +66,10 @@
                     <div>
                         <div class="w-full flex flex-col mt-8">
                             <label class="font-semibold leading-none">Votre message</label>
-                            <textarea type="text" name="message" id="message" rows="4" min="10" placeholder="Votre super message" required class="h-40 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200">{{ old('message' ?? '') }}</textarea>
+                            <textarea type="text" name="message" id="message" rows="4" min="10" placeholder="Votre super message" required class="h-40 text-base leading-none text-gray-900 p-3
+                                focus:oultine-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200">
+                                    {!! old('message' ?? '') !!}
+                            </textarea>
                         </div>
                     </div>
                     @error('message')
