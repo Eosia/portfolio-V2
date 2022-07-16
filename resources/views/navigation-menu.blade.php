@@ -1,11 +1,11 @@
 <nav x-data="{ open: false }" class="bg-black border-b border-gray-100 py-10
 " id="top">
     <!-- Primary Navigation Menu -->
-    <div class="w-full  mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-evenly h-16">
             <div class="flex justify-content-between align-items-center">
                 <!-- Logo -->
-                <div class="shrink-0 ml-0 flex items-center">
+                <div class="shrink-0 ml-0  flex items-center">
                     <a href="{{ route('home') }}">
                         <img src="{{ asset('assets/img/favicon/logo.png') }}" alt="logo d'Eosia développeur" class="rounded" width="92" height="92">
                     </a>
@@ -14,32 +14,32 @@
                 <!-- Navigation Links -->
 
                 <!--lien vers d'accueil-->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px lg:ml-20 sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')" class="x-jet-nav-link active:text-red-700 ">
                         {{ __('Accueil') }}
                     </x-jet-nav-link>
                 </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px lg:ml-20 sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('skills') }}" :active="request()->routeIs('skills')" class="x-jet-nav-link">
                         {{ __('Skills') }}
                     </x-jet-nav-link>
                 </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px lg:ml-20 sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('portfolio') }}" :active="request()->routeIs('portfolio')" class="x-jet-nav-link">
                         {{ __('Portfolio') }}
                     </x-jet-nav-link>
                 </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px lg:ml-20 sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')" class="x-jet-nav-link">
                         {{ __('Contact') }}
                     </x-jet-nav-link>
                 </div>
 
                 @auth()
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <div class="hidden space-x-8 lg:ml-20 sm:-my-px sm:ml-10 sm:flex">
                         <x-jet-nav-link href="{{ route('filament.pages.dashboard') }}" :active="request()->routeIs('filament.pages.dashboard')" class="x-jet-nav-link">
                             {{ __('Admin') }}
                         </x-jet-nav-link>
@@ -50,7 +50,7 @@
             </div>
 
             @auth()
-                <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="hidden sm:flex sm:items-center lg:ml-20 sm:ml-6">
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ml-3 relative">
