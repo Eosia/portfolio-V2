@@ -22,7 +22,7 @@
         <div class="bg-gradient-to-b from-indigo-200 to-indogo-600 h-96"></div>
         <div class="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
             <div class="bg-white w-full shadow rounded p-8 sm:p-12 -mt-72">
-                <p class="text-3xl font-bold leading-7 text-center">NOUS CONTACTER</p>
+                <p class="text-3xl font-bold leading-7 text-center">ME CONTACTER</p>
                 <form  method="post"  action="{{ route('contact.send') }}" enctype="multipart/form-data" >
                     @csrf
                     <x-honeypot />
